@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Casa Chunan — AI Marketing Transformation | Dreamer AI Solutions</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+  
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', -apple-system, sans-serif; background: #0a0a0a; color: #fff; }
+  
+  .slide {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 80px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Slide 1: Cover */
+  .slide-cover {
+    background: linear-gradient(135deg, #0c2340 0%, #1a4a6e 30%, #2d8a7e 60%, #e8874a 90%, #f4a261 100%);
+    text-align: center;
+    align-items: center;
+  }
+  .slide-cover .for {
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    opacity: 0.7;
+    margin-bottom: 24px;
+  }
+  .slide-cover h1 {
+    font-size: 3.8rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 16px;
+    text-shadow: 0 4px 30px rgba(0,0,0,0.3);
+  }
+  .slide-cover h1 span { display: block; font-size: 1.8rem; font-weight: 300; opacity: 0.85; margin-top: 8px; }
+  .slide-cover .location {
+    font-size: 1rem;
+    font-weight: 500;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 50px;
+    border: 1px solid rgba(255,255,255,0.2);
+    margin-top: 30px;
+  }
+  .slide-cover .brand {
+    position: absolute;
+    bottom: 40px;
+    left: 0; right: 0;
+    text-align: center;
+    font-size: 0.85rem;
+    opacity: 0.5;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+
+  /* Slide 2: The Problem */
+  .slide-problem { background: linear-gradient(180deg, #0c1a2e 0%, #132b44 100%); }
+  .slide-problem h2 { font-size: 2.8rem; font-weight: 700; margin-bottom: 16px; color: #f4a261; }
+  .slide-problem .sub { font-size: 1.05rem; opacity: 0.6; margin-bottom: 40px; max-width: 600px; }
+  
+  .data-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 900px;
+  }
+  .data-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 28px 22px;
+    text-align: center;
+  }
+  .data-card .value {
+    font-size: 2.4rem;
+    font-weight: 800;
+    margin-bottom: 6px;
+  }
+  .data-card .value.red { color: #ff6b6b; }
+  .data-card .value.amber { color: #f4a261; }
+  .data-card .label { font-size: 0.82rem; opacity: 0.55; line-height: 1.4; }
+  .alert-bar {
+    margin-top: 28px;
+    background: rgba(255,107,107,0.12);
+    border: 1px solid rgba(255,107,107,0.25);
+    border-radius: 12px;
+    padding: 18px 24px;
+    font-size: 0.95rem;
+    max-width: 900px;
+  }
+  .alert-bar strong { color: #ff6b6b; }
+
+  /* Slide 3: What's Wrong */
+  .slide-diagnosis { background: linear-gradient(180deg, #132b44 0%, #0e2238 100%); }
+  .slide-diagnosis h2 { font-size: 2.5rem; font-weight: 700; margin-bottom: 40px; }
+  .slide-diagnosis h2 span { color: #ff6b6b; }
+  .diag-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    max-width: 950px;
+  }
+  .diag-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-left: 3px solid #f4a261;
+    border-radius: 12px;
+    padding: 22px 24px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .diag-card .num { font-size: 1.4rem; font-weight: 800; color: #f4a261; min-width: 28px; }
+  .diag-card h3 { font-size: 1rem; font-weight: 600; margin-bottom: 4px; }
+  .diag-card p { font-size: 0.82rem; opacity: 0.55; line-height: 1.5; }
+
+  /* Slide 4: Solution */
+  .slide-solution { background: linear-gradient(180deg, #0e2238 0%, #0c2340 100%); }
+  .slide-solution h2 { font-size: 2.5rem; font-weight: 700; margin-bottom: 40px; }
+  .slide-solution h2 span { color: #2dd4a8; }
+  .sol-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    max-width: 1000px;
+  }
+  .sol-card {
+    background: linear-gradient(135deg, rgba(45,138,126,0.08) 0%, rgba(244,162,97,0.03) 100%);
+    border: 1px solid rgba(45,212,168,0.12);
+    border-radius: 12px;
+    padding: 18px 20px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+  .sol-card .icon { font-size: 1.4rem; min-width: 32px; text-align: center; }
+  .sol-card h3 { font-size: 0.95rem; font-weight: 600; }
+  .sol-card.done { border-color: rgba(45,212,168,0.35); }
+  .sol-card.done::after {
+    content: 'BUILT';
+    font-size: 0.6rem;
+    font-weight: 700;
+    color: #2dd4a8;
+    letter-spacing: 1px;
+    margin-left: auto;
+    background: rgba(45,212,168,0.12);
+    padding: 3px 10px;
+    border-radius: 20px;
+  }
+
+  /* Slide 5: Already Built */
+  .slide-built { background: linear-gradient(180deg, #0c2340 0%, #0a1a30 100%); }
+  .slide-built h2 { font-size: 2.5rem; font-weight: 700; margin-bottom: 12px; }
+  .slide-built .tagline { font-size: 1.15rem; color: #2dd4a8; font-weight: 500; margin-bottom: 40px; }
+  .built-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 950px;
+  }
+  .built-item {
+    background: linear-gradient(135deg, rgba(45,212,168,0.08), rgba(255,255,255,0.02));
+    border: 1px solid rgba(45,212,168,0.2);
+    border-radius: 16px;
+    padding: 32px 24px;
+    text-align: center;
+  }
+  .built-item .icon { font-size: 2.5rem; margin-bottom: 14px; }
+  .built-item h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 8px; }
+  .built-item p { font-size: 0.85rem; opacity: 0.55; line-height: 1.5; }
+  .slide-built .quote {
+    margin-top: 36px;
+    font-size: 1.3rem;
+    font-weight: 300;
+    font-style: italic;
+    opacity: 0.7;
+    max-width: 700px;
+  }
+  .slide-built .quote em { color: #f4a261; font-style: normal; font-weight: 600; }
+
+  /* Slide 6: Pricing */
+  .slide-pricing {
+    background: linear-gradient(180deg, #0a1a30 0%, #0a1628 100%);
+    align-items: center;
+  }
+  .slide-pricing h2 { font-size: 2.5rem; font-weight: 700; margin-bottom: 50px; text-align: center; }
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1000px;
+    width: 100%;
+  }
+  .pkg-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 20px;
+    padding: 40px 32px;
+    text-align: center;
+    position: relative;
+  }
+  .pkg-card.featured {
+    background: linear-gradient(135deg, rgba(45,212,168,0.1) 0%, rgba(244,162,97,0.06) 100%);
+    border-color: #2dd4a8;
+    transform: scale(1.03);
+  }
+  .pkg-card .badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #2dd4a8, #1a9e7e);
+    color: #0a0a0a;
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 4px 16px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .pkg-card .tier { font-size: 0.8rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #f4a261; margin-bottom: 20px; }
+  .pkg-card .setup { font-size: 2.8rem; font-weight: 800; }
+  .pkg-card .setup small { font-size: 0.8rem; font-weight: 400; opacity: 0.5; }
+  .pkg-card .monthly { font-size: 1.1rem; opacity: 0.6; margin: 6px 0 24px; }
+  .pkg-card ul { list-style: none; text-align: left; }
+  .pkg-card li { font-size: 0.85rem; padding: 5px 0; opacity: 0.75; }
+  .pkg-card li::before { content: "✓ "; color: #2dd4a8; font-weight: 700; }
+
+  /* Slide 7: ROI */
+  .slide-roi { background: linear-gradient(180deg, #0a1628 0%, #132b44 100%); }
+  .slide-roi h2 { font-size: 2.5rem; font-weight: 700; margin-bottom: 40px; }
+  .slide-roi h2 span { color: #2dd4a8; }
+  .roi-bars {
+    display: flex;
+    gap: 20px;
+    align-items: flex-end;
+    max-width: 800px;
+    height: 320px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    margin-bottom: 20px;
+  }
+  .roi-bar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+  }
+  .roi-bar .amount {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .roi-bar .bar {
+    width: 100%;
+    max-width: 120px;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+  }
+  .roi-bar .label {
+    font-size: 0.8rem;
+    opacity: 0.5;
+    margin-top: 12px;
+    text-align: center;
+  }
+  .bar-current { background: rgba(255,255,255,0.1); height: 120px; }
+  .bar-conservative { background: linear-gradient(180deg, #f4a261, #e8874a); height: 168px; }
+  .bar-moderate { background: linear-gradient(180deg, #2dd4a8, #1a9e7e); height: 204px; }
+  .bar-aggressive { background: linear-gradient(180deg, #60efcb, #2dd4a8); height: 264px; }
+  .roi-stats {
+    display: flex;
+    gap: 32px;
+    margin-top: 24px;
+  }
+  .roi-stat {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 18px 28px;
+  }
+  .roi-stat .val { font-size: 1.5rem; font-weight: 800; color: #2dd4a8; }
+  .roi-stat .lbl { font-size: 0.78rem; opacity: 0.5; margin-top: 2px; }
+
+  /* Slide 8: CTA */
+  .slide-cta {
+    background: linear-gradient(135deg, #0c2340 0%, #2d8a7e 50%, #f4a261 100%);
+    text-align: center;
+    align-items: center;
+  }
+  .slide-cta h2 { font-size: 3rem; font-weight: 800; margin-bottom: 20px; }
+  .slide-cta p { font-size: 1.15rem; opacity: 0.85; margin-bottom: 40px; max-width: 600px; line-height: 1.7; }
+  .steps-row {
+    display: flex;
+    gap: 28px;
+    margin-bottom: 40px;
+  }
+  .cta-step {
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 14px;
+    padding: 24px 28px;
+    text-align: center;
+    min-width: 180px;
+  }
+  .cta-step .num { font-size: 1.8rem; font-weight: 800; margin-bottom: 8px; opacity: 0.7; }
+  .cta-step h3 { font-size: 0.95rem; font-weight: 600; }
+  .cta-step p { font-size: 0.8rem; opacity: 0.7; margin-top: 4px; }
+  .cta-btn {
+    display: inline-block;
+    background: #fff;
+    color: #0c2340;
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 18px 48px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(0,0,0,0.3); }
+  .slide-cta .contact { margin-top: 24px; font-size: 0.85rem; opacity: 0.6; }
+
+  @media (max-width: 768px) {
+    .slide { padding: 40px 24px; }
+    .slide-cover h1 { font-size: 2.4rem; }
+    .slide-cover h1 span { font-size: 1.2rem; }
+    .data-cards { grid-template-columns: 1fr 1fr; }
+    .diag-grid, .sol-grid, .built-items { grid-template-columns: 1fr; }
+    .pricing-grid { grid-template-columns: 1fr; }
+    .roi-bars { height: 220px; }
+    .steps-row { flex-direction: column; gap: 12px; }
+  }
+  @media print {
+    .slide { page-break-after: always; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1: COVER -->
+<div class="slide slide-cover">
+  <div class="for">Prepared for Kimlee</div>
+  <h1>Casa Chunan<span>AI Marketing Transformation</span></h1>
+  <div class="location">📍 Maunabo, Puerto Rico &nbsp;·&nbsp; February 2026</div>
+  <div class="brand">Dreamer AI Solutions</div>
+</div>
+
+<!-- SLIDE 2: THE PROBLEM -->
+<div class="slide slide-problem">
+  <h2>Your Property Deserves Better</h2>
+  <p class="sub">Casa Chunan has a perfect 5.0 rating — your guests love it. But almost no one can find it.</p>
+  <div class="data-cards">
+    <div class="data-card">
+      <div class="value">5.0 ★</div>
+      <div class="label">Guest Rating</div>
+    </div>
+    <div class="data-card">
+      <div class="value red">8</div>
+      <div class="label">Reviews in 2 Years</div>
+    </div>
+    <div class="data-card">
+      <div class="value amber">$300–500</div>
+      <div class="label">Monthly Revenue</div>
+    </div>
+    <div class="data-card">
+      <div class="value red">0</div>
+      <div class="label">External Marketing</div>
+    </div>
+  </div>
+  <div class="alert-bar">
+    <strong>⚠ Peak Season Alert:</strong> February 23–28 and ALL of March 2026 are completely open. These are the highest-demand weeks of the year.
+  </div>
+</div>
+
+<!-- SLIDE 3: WHAT'S WRONG -->
+<div class="slide slide-diagnosis">
+  <h2>6 Problems <span>Holding You Back</span></h2>
+  <div class="diag-grid">
+    <div class="diag-card">
+      <div class="num">1</div>
+      <div><h3>Low Visibility</h3><p>8 reviews vs. competitors with 28–106. Airbnb buries you in search.</p></div>
+    </div>
+    <div class="diag-card">
+      <div class="num">2</div>
+      <div><h3>Generic Title</h3><p>"Brisas De Emajaguas" doesn't sell the experience or tell travelers why to book.</p></div>
+    </div>
+    <div class="diag-card">
+      <div class="num">3</div>
+      <div><h3>Electricity Surcharge</h3><p>$15/day fee creates friction and scares budget-conscious guests away.</p></div>
+    </div>
+    <div class="diag-card">
+      <div class="num">4</div>
+      <div><h3>Zero External Marketing</h3><p>No social media, no website, no SEO. 100% dependent on Airbnb's algorithm.</p></div>
+    </div>
+    <div class="diag-card">
+      <div class="num">5</div>
+      <div><h3>No Seasonal Strategy</h3><p>Peak season (Dec–April) treated identically to off-season. Leaving money on the table.</p></div>
+    </div>
+    <div class="diag-card">
+      <div class="num">6</div>
+      <div><h3>Missing Trust Signals</h3><p>No Superhost badge, limited photos, no host story. Browsers don't convert to bookers.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 4: THE SOLUTION -->
+<div class="slide slide-solution">
+  <h2>10 AI-Powered <span>Solutions</span></h2>
+  <div class="sol-grid">
+    <div class="sol-card"><div class="icon">✍️</div><h3>AI-Optimized Listing Copy & Title</h3></div>
+    <div class="sol-card"><div class="icon">📊</div><h3>Dynamic Pricing Engine</h3></div>
+    <div class="sol-card done"><div class="icon">🌐</div><h3>Direct Booking Website</h3></div>
+    <div class="sol-card"><div class="icon">📱</div><h3>Social Media Content Creation</h3></div>
+    <div class="sol-card"><div class="icon">⭐</div><h3>AI Review Response System</h3></div>
+    <div class="sol-card"><div class="icon">🔍</div><h3>SEO for NJ, NY & PR Markets</h3></div>
+    <div class="sol-card"><div class="icon">📧</div><h3>Email Marketing for Past Guests</h3></div>
+    <div class="sol-card"><div class="icon">🤖</div><h3>AI Chatbot for Guest Communication</h3></div>
+    <div class="sol-card"><div class="icon">👁️</div><h3>Competitor Monitoring Dashboard</h3></div>
+    <div class="sol-card"><div class="icon">📈</div><h3>Performance Analytics & Reporting</h3></div>
+  </div>
+</div>
+
+<!-- SLIDE 5: ALREADY BUILT -->
+<div class="slide slide-built">
+  <h2>What We've Already Built</h2>
+  <p class="tagline">We didn't just pitch you. We started building.</p>
+  <div class="built-items">
+    <div class="built-item">
+      <div class="icon">🌐</div>
+      <h3>Direct Booking Website</h3>
+      <p>Live now at <a href="https://cuzo151.github.io/casa-chunan/" style="color:#2dd4a8">cuzo151.github.io/casa-chunan</a> — with SEO targeting NY, NJ & PR travelers so you're found outside Airbnb.</p>
+    </div>
+    <div class="built-item">
+      <div class="icon">🎬</div>
+      <h3>Demo Marketing Videos</h3>
+      <p>Sample videos showcasing what we create once you provide your property photos & footage.</p>
+    </div>
+    <div class="built-item">
+      <div class="icon">🔬</div>
+      <h3>Competitor Analysis</h3>
+      <p>Full market research — pricing, reviews, calendar gaps — completed.</p>
+    </div>
+  </div>
+  <p class="quote">"This is <em>not a pitch</em> — we've already started working on your success."</p>
+</div>
+
+<!-- SLIDE 6: PRICING -->
+<div class="slide slide-pricing">
+  <h2>Investment</h2>
+  <div class="pricing-grid">
+    <div class="pkg-card">
+      <div class="tier">Starter</div>
+      <div class="setup">$997 <small>setup</small></div>
+      <div class="monthly">+ $497/month</div>
+      <ul>
+        <li>AI-optimized listing copy & title</li>
+        <li>AI review responses</li>
+        <li>Basic social media (4 posts/month)</li>
+        <li>Monthly performance snapshot</li>
+        <li>Photo ordering optimization</li>
+        <li>Month-to-month</li>
+      </ul>
+    </div>
+    <div class="pkg-card featured">
+      <div class="badge">Recommended</div>
+      <div class="tier">Growth</div>
+      <div class="setup">$2,500 <small>setup</small></div>
+      <div class="monthly">+ $997/month</div>
+      <ul>
+        <li>AI-optimized listing copy & title</li>
+        <li>Direct booking website</li>
+        <li>Social media (12 posts/month)</li>
+        <li>AI review responses</li>
+        <li>Basic SEO & Google Business</li>
+        <li>Monthly performance reports</li>
+        <li>3-month minimum</li>
+      </ul>
+    </div>
+    <div class="pkg-card">
+      <div class="tier">Full Stack</div>
+      <div class="setup">$4,000 <small>setup</small></div>
+      <div class="monthly">+ $1,797/month</div>
+      <ul>
+        <li>Everything in Growth</li>
+        <li>Dynamic pricing engine</li>
+        <li>Email marketing</li>
+        <li>AI guest chatbot</li>
+        <li>Competitor monitoring</li>
+        <li>Paid ad management</li>
+        <li>Dedicated account manager</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 7: ROI -->
+<div class="slide slide-roi">
+  <h2>Projected <span>Return on Investment</span></h2>
+  <div class="roi-bars">
+    <div class="roi-bar">
+      <div class="amount">$4,800</div>
+      <div class="bar bar-current"></div>
+      <div class="label">Current<br>Annual</div>
+    </div>
+    <div class="roi-bar">
+      <div class="amount">$6,720</div>
+      <div class="bar bar-conservative"></div>
+      <div class="label">Conservative<br>+40%</div>
+    </div>
+    <div class="roi-bar">
+      <div class="amount">$8,160</div>
+      <div class="bar bar-moderate"></div>
+      <div class="label">Moderate<br>+70%</div>
+    </div>
+    <div class="roi-bar">
+      <div class="amount">$10,560</div>
+      <div class="bar bar-aggressive"></div>
+      <div class="label">Aggressive<br>+120%</div>
+    </div>
+  </div>
+  <div class="roi-stats">
+    <div class="roi-stat"><div class="val">Month 3–4</div><div class="lbl">Break-even point</div></div>
+    <div class="roi-stat"><div class="val">117–159%</div><div class="lbl">Year 1 ROI</div></div>
+    <div class="roi-stat"><div class="val">+$5,760</div><div class="lbl">Max added revenue/year</div></div>
+  </div>
+</div>
+
+<!-- SLIDE 8: NEXT STEPS -->
+<div class="slide slide-cta">
+  <h2>Let's Get Started</h2>
+  <p>Kimlee, your property is a hidden gem. Let's make sure the world finds it.</p>
+  <div class="steps-row">
+    <div class="cta-step">
+      <div class="num">1</div>
+      <h3>Schedule a Call</h3>
+      <p>15 minutes to review</p>
+    </div>
+    <div class="cta-step">
+      <div class="num">2</div>
+      <h3>Choose a Package</h3>
+      <p>Growth recommended</p>
+    </div>
+    <div class="cta-step">
+      <div class="num">3</div>
+      <h3>We Start in 48hrs</h3>
+      <p>Results in 2–4 weeks</p>
+    </div>
+  </div>
+  <a href="https://dreamerai.io/consultation.html" class="cta-btn">Book Your Free Consultation →</a>
+  <div class="contact">dreamerai.io · jlasalle@dreamerai.io · Jay LaSalle</div>
+</div>
+
+</body>
+</html>

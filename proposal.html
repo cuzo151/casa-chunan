@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Marketing Proposal — Casa Chunan | Dreamer AI Solutions</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0c2340;
+    --navy-light: #163a5f;
+    --coral: #e8874a;
+    --coral-light: #f4a261;
+    --teal: #2dd4a8;
+    --white: #ffffff;
+    --gray-50: #f8f9fa;
+    --gray-100: #f0f2f5;
+    --gray-200: #e2e6ea;
+    --gray-600: #6c757d;
+    --gray-800: #2d3436;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'DM Sans', sans-serif; color: var(--gray-800); line-height: 1.6; background: var(--white); }
+  h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; }
+
+  /* Header */
+  .header {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+    color: var(--white);
+    padding: 60px 80px;
+    position: relative;
+    overflow: hidden;
+  }
+  .header::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(232,135,74,0.15) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .header .brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--coral-light);
+    margin-bottom: 30px;
+  }
+  .header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+  .header .meta {
+    font-size: 0.95rem;
+    opacity: 0.8;
+    line-height: 1.8;
+  }
+  .header .meta strong { color: var(--coral-light); }
+
+  /* Sections */
+  .section { padding: 50px 80px; }
+  .section:nth-child(even) { background: var(--gray-50); }
+  .section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 8px;
+    padding-bottom: 12px;
+    border-bottom: 3px solid var(--coral);
+    display: inline-block;
+  }
+  .section .section-num {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--coral);
+    margin-bottom: 6px;
+  }
+  .section-body { margin-top: 24px; }
+
+  /* Executive summary */
+  .exec-summary {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--gray-800);
+    max-width: 800px;
+  }
+
+  /* Stats grid */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 24px;
+  }
+  .stat-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+  .stat-card .value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--navy);
+  }
+  .stat-card .label {
+    font-size: 0.85rem;
+    color: var(--gray-600);
+    margin-top: 4px;
+  }
+  .stat-card.alert { border-left: 4px solid var(--coral); }
+
+  /* Problems */
+  .problems-list {
+    display: grid;
+    gap: 16px;
+    max-width: 800px;
+  }
+  .problem-item {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    background: var(--white);
+    border-radius: 10px;
+    padding: 20px 24px;
+    border-left: 4px solid var(--coral);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  }
+  .problem-item .num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--coral);
+    min-width: 32px;
+  }
+  .problem-item h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 4px;
+  }
+  .problem-item p { font-size: 0.9rem; color: var(--gray-600); }
+
+  /* Solutions grid */
+  .solutions-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .solution-item {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    padding: 18px 20px;
+    background: var(--white);
+    border-radius: 10px;
+    border: 1px solid var(--gray-200);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+  }
+  .solution-item .icon {
+    font-size: 1.5rem;
+    min-width: 36px;
+    text-align: center;
+  }
+  .solution-item h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 2px;
+  }
+  .solution-item p { font-size: 0.82rem; color: var(--gray-600); }
+  .solution-item.built {
+    border-color: var(--teal);
+    background: linear-gradient(135deg, rgba(45,212,168,0.04), transparent);
+  }
+  .solution-item.built::after { content: '✓ BUILT'; font-size: 0.65rem; font-weight: 700; color: var(--teal); letter-spacing: 1px; margin-left: auto; white-space: nowrap; align-self: center; }
+
+  /* Pricing */
+  .pricing-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 960px;
+  }
+  .price-card {
+    border-radius: 16px;
+    padding: 36px 32px;
+    position: relative;
+  }
+  .price-card.recommended {
+    background: var(--navy);
+    color: var(--white);
+  }
+  .price-card.recommended .badge {
+    position: absolute;
+    top: -10px;
+    right: 24px;
+    background: var(--coral);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 4px 14px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .price-card.alt {
+    background: var(--gray-100);
+    border: 1px solid var(--gray-200);
+  }
+  .price-card .tier {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  .price-card .price-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  .price-card .price-block .amount {
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+  .price-card .price-block .label {
+    font-size: 0.75rem;
+    opacity: 0.65;
+  }
+  .price-card ul { list-style: none; }
+  .price-card li {
+    font-size: 0.88rem;
+    padding: 5px 0;
+    opacity: 0.85;
+  }
+  .price-card.recommended li::before { content: "✓ "; color: var(--teal); font-weight: 700; }
+  .price-card.alt li::before { content: "✓ "; color: var(--coral); font-weight: 700; }
+
+  /* ROI */
+  .roi-table {
+    width: 100%;
+    max-width: 700px;
+    border-collapse: collapse;
+    margin-top: 16px;
+  }
+  .roi-table th, .roi-table td {
+    padding: 14px 20px;
+    text-align: left;
+    font-size: 0.95rem;
+  }
+  .roi-table thead th {
+    background: var(--navy);
+    color: var(--white);
+    font-weight: 600;
+  }
+  .roi-table thead th:first-child { border-radius: 8px 0 0 0; }
+  .roi-table thead th:last-child { border-radius: 0 8px 0 0; }
+  .roi-table tbody tr:nth-child(even) { background: var(--gray-50); }
+  .roi-table tbody tr { border-bottom: 1px solid var(--gray-200); }
+  .roi-table .highlight { color: var(--teal); font-weight: 700; }
+  .roi-meta {
+    margin-top: 16px;
+    display: flex;
+    gap: 32px;
+  }
+  .roi-meta .item {
+    background: linear-gradient(135deg, var(--navy), var(--navy-light));
+    color: var(--white);
+    padding: 16px 24px;
+    border-radius: 10px;
+  }
+  .roi-meta .item .val { font-size: 1.4rem; font-weight: 700; font-family: 'Cormorant Garamond', serif; }
+  .roi-meta .item .lbl { font-size: 0.8rem; opacity: 0.7; }
+
+  /* Already built */
+  .built-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .built-card {
+    background: linear-gradient(135deg, rgba(45,212,168,0.08), rgba(244,162,97,0.04));
+    border: 1px solid rgba(45,212,168,0.25);
+    border-radius: 14px;
+    padding: 28px 24px;
+    text-align: center;
+  }
+  .built-card .icon { font-size: 2rem; margin-bottom: 10px; }
+  .built-card h4 { font-family: 'DM Sans', sans-serif; font-size: 1rem; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
+  .built-card p { font-size: 0.85rem; color: var(--gray-600); }
+  .built-callout {
+    margin-top: 24px;
+    background: var(--navy);
+    color: var(--white);
+    padding: 24px 32px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-style: italic;
+    text-align: center;
+  }
+  .built-callout em { color: var(--coral-light); font-style: normal; font-weight: 600; }
+
+  /* Next steps */
+  .steps-list {
+    display: grid;
+    gap: 16px;
+    max-width: 700px;
+  }
+  .step-item {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 20px 24px;
+    background: var(--white);
+    border-radius: 12px;
+    border: 1px solid var(--gray-200);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  }
+  .step-item .num {
+    width: 44px;
+    height: 44px;
+    background: var(--navy);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+  .step-item h4 { font-family: 'DM Sans', sans-serif; font-size: 1rem; font-weight: 600; color: var(--navy); margin-bottom: 2px; }
+  .step-item p { font-size: 0.88rem; color: var(--gray-600); }
+
+  /* Footer */
+  .footer {
+    background: var(--navy);
+    color: var(--white);
+    padding: 40px 80px;
+    text-align: center;
+  }
+  .footer .brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .footer .contact { font-size: 0.9rem; opacity: 0.7; margin-bottom: 4px; }
+  .footer .tagline { font-size: 0.85rem; color: var(--coral-light); margin-top: 12px; font-style: italic; }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .header, .section, .footer { padding: 36px 24px; }
+    .header h1 { font-size: 2rem; }
+    .solutions-grid, .built-grid { grid-template-columns: 1fr; }
+    .pricing-cards { grid-template-columns: 1fr; }
+    .stats-grid { grid-template-columns: 1fr 1fr; }
+    .roi-meta { flex-direction: column; gap: 12px; }
+  }
+
+  /* Print */
+  @media print {
+    body { font-size: 11pt; }
+    .header, .section, .footer { padding: 30px 50px; }
+    .section { page-break-inside: avoid; }
+    .header { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+    .footer { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+    .price-card.recommended { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+    .roi-table thead th { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="brand">Dreamer AI Solutions</div>
+  <h1>AI Marketing Proposal<br>for Casa Chunan</h1>
+  <div class="meta">
+    <strong>Prepared for:</strong> Kimlee &nbsp;|&nbsp; <strong>Date:</strong> February 22, 2026<br>
+    <strong>Contact:</strong> Jay LaSalle &nbsp;|&nbsp; jlasalle@dreamerai.io &nbsp;|&nbsp; dreamerai.io
+  </div>
+</div>
+
+<!-- 1. EXECUTIVE SUMMARY -->
+<div class="section">
+  <div class="section-num">Section 01</div>
+  <h2>Executive Summary</h2>
+  <div class="section-body">
+    <p class="exec-summary">
+      We conducted an in-depth analysis of your Airbnb listing, <strong>Casa Chunan</strong> in Maunabo, Puerto Rico — along with your competitive landscape, pricing, calendar utilization, and online presence. We identified specific, actionable opportunities to <strong>dramatically increase your bookings and revenue</strong> using AI-powered marketing tools. This proposal outlines what we found, what we recommend, and what we've already started building for you.
+    </p>
+  </div>
+</div>
+
+<!-- 2. CURRENT PERFORMANCE -->
+<div class="section">
+  <div class="section-num">Section 02</div>
+  <h2>Current Performance Analysis</h2>
+  <div class="section-body">
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="value">5.0 ★</div>
+        <div class="label">Guest Rating (8 reviews)</div>
+      </div>
+      <div class="stat-card">
+        <div class="value">$172</div>
+        <div class="label">Per Night Rate</div>
+      </div>
+      <div class="stat-card alert">
+        <div class="value">~$400</div>
+        <div class="label">Est. Monthly Revenue</div>
+      </div>
+      <div class="stat-card alert">
+        <div class="value">12–16</div>
+        <div class="label">Bookings in 2 Years</div>
+      </div>
+    </div>
+    <div style="margin-top: 20px; padding: 18px 24px; background: #fff3e6; border-radius: 10px; border-left: 4px solid var(--coral); font-size: 0.92rem;">
+      <strong style="color: var(--coral);">⚠ Peak Season Alert:</strong> February 23–28 and <strong>all of March 2026</strong> are completely open. This is peak travel season for Puerto Rico — these nights should be booked.
+    </div>
+    <p style="margin-top: 14px; font-size: 0.9rem; color: var(--gray-600);">
+      Listing: <a href="https://airbnb.com/h/casachunan" style="color: var(--navy);">airbnb.com/h/casachunan</a> &nbsp;|&nbsp; 3BR in Maunabo &nbsp;|&nbsp; Market range: $137–$280/night
+    </p>
+  </div>
+</div>
+
+<!-- 3. PROBLEMS DIAGNOSED -->
+<div class="section">
+  <div class="section-num">Section 03</div>
+  <h2>Problems Diagnosed</h2>
+  <div class="section-body">
+    <div class="problems-list">
+      <div class="problem-item">
+        <div class="num">1</div>
+        <div><h4>Low Visibility</h4><p>Only 8 reviews in 2 years. Top competitors in Maunabo have 28–106 reviews. Airbnb's algorithm rewards volume — you're invisible in search results.</p></div>
+      </div>
+      <div class="problem-item">
+        <div class="num">2</div>
+        <div><h4>Generic Title</h4><p>"Brisas De Emajaguas" doesn't sell the experience. It doesn't tell travelers what makes your property special or why they should book.</p></div>
+      </div>
+      <div class="problem-item">
+        <div class="num">3</div>
+        <div><h4>Electricity Surcharge</h4><p>The $15/day surcharge creates friction at checkout and scares budget-conscious guests. This should be bundled into the nightly rate.</p></div>
+      </div>
+      <div class="problem-item">
+        <div class="num">4</div>
+        <div><h4>Zero External Marketing</h4><p>No social media presence, no direct booking website, no SEO. You're 100% dependent on Airbnb's algorithm — and paying their 15% commission on every booking.</p></div>
+      </div>
+      <div class="problem-item">
+        <div class="num">5</div>
+        <div><h4>No Seasonal Strategy</h4><p>Peak season (December–April) is treated the same as off-season. No rate adjustments, no targeted promotions, no minimum stay optimizations.</p></div>
+      </div>
+      <div class="problem-item">
+        <div class="num">6</div>
+        <div><h4>Missing Trust Signals</h4><p>No Superhost badge, limited photo variety, no host story optimization. These are the details that convert browsers into bookers.</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 4. OUR SOLUTION -->
+<div class="section">
+  <div class="section-num">Section 04</div>
+  <h2>Our Solution — 10 AI-Powered Use Cases</h2>
+  <div class="section-body">
+    <div class="solutions-grid">
+      <div class="solution-item">
+        <div class="icon">✍️</div>
+        <div><h4>1. AI-Optimized Listing Copy & Title</h4><p>Data-driven title and description that converts.</p></div>
+      </div>
+      <div class="solution-item">
+        <div class="icon">📊</div>
+        <div><h4>2. Dynamic Pricing Engine</h4><p>Automatic rate adjustments based on demand & competition.</p></div>
+      </div>
+      <div class="solution-item built">
+        <div class="icon">🌐</div>
+        <div><h4>3. Direct Booking Website</h4><p>Your own website outside Airbnb — save 15% on commissions and build a brand guests can find directly.</p></div>
+      </div>
+      <div class="solution-item">
+        <div class="icon">📱</div>
+        <div><h4>4. Social Media Content</h4><p>Instagram, Facebook, TikTok — 12+ posts/month.</p></div>
+      </div>
+      <div class="solution-item">
+        <div class="icon">⭐</div>
+        <div><h4>5. AI Review Response System</h4><p>Instant, personalized responses to every review.</p></div>
+      </div>
+      <div class="solution-item">
+        <div class="icon">🔍</div>
+        <div><h4>6. SEO Targeting NJ, NY & PR</h4><p>Search engine optimization so travelers from New York, New Jersey, and Puerto Rico find your property directly on Google — not just through Airbnb.</p></div>
+      </div>
+      <div class="solution-item">
+        <div class="icon">📧</div>
+        <div><h4>7. Email Marketing for Past Guests</h4><p>Turn one-time guests into repeat bookers.</p></div>
+      </div>
+      <div class="solution-item">
+        <div class="icon">🤖</div>
+        <div><h4>8. AI Chatbot for Guests</h4><p>24/7 bilingual guest communication.</p></div>
+      </div>
+      <div class="solution-item">
+        <div class="icon">👁️</div>
+        <div><h4>9. Competitor Monitoring</h4><p>Real-time dashboard of competitor rates & availability.</p></div>
+      </div>
+      <div class="solution-item">
+        <div class="icon">📈</div>
+        <div><h4>10. Performance Analytics</h4><p>Monthly reporting with actionable insights.</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 5. PRICING -->
+<div class="section">
+  <div class="section-num">Section 05</div>
+  <h2>Recommended Package</h2>
+  <div class="section-body">
+    <div class="pricing-cards">
+      <div class="price-card alt">
+        <div class="tier">Starter</div>
+        <div class="price-row">
+          <div class="price-block"><div class="amount">$997</div><div class="label">One-time setup</div></div>
+          <div class="price-block"><div class="amount">$497</div><div class="label">Per month</div></div>
+        </div>
+        <ul>
+          <li>AI-optimized listing copy & title</li>
+          <li>AI review response system</li>
+          <li>Basic social media (4 posts/mo)</li>
+          <li>Monthly performance snapshot</li>
+          <li>Photo ordering optimization</li>
+          <li>Month-to-month — no commitment</li>
+        </ul>
+      </div>
+      <div class="price-card recommended">
+        <div class="badge">Recommended</div>
+        <div class="tier">Growth</div>
+        <div class="price-row">
+          <div class="price-block"><div class="amount">$2,500</div><div class="label">One-time setup</div></div>
+          <div class="price-block"><div class="amount">$997</div><div class="label">Per month</div></div>
+        </div>
+        <ul>
+          <li>AI-optimized listing copy & title</li>
+          <li>Direct booking website</li>
+          <li>Social media content (12 posts/mo)</li>
+          <li>AI review response system</li>
+          <li>SEO targeting NJ, NY & PR markets</li>
+          <li>Monthly performance reports</li>
+          <li>3-month minimum commitment</li>
+        </ul>
+      </div>
+      <div class="price-card alt">
+        <div class="tier">Full Stack</div>
+        <div class="price-row">
+          <div class="price-block"><div class="amount">$4,000</div><div class="label">One-time setup</div></div>
+          <div class="price-block"><div class="amount">$1,797</div><div class="label">Per month</div></div>
+        </div>
+        <ul>
+          <li>Everything in Growth, plus:</li>
+          <li>Dynamic pricing engine</li>
+          <li>Email marketing for past guests</li>
+          <li>AI chatbot for guest communication</li>
+          <li>Competitor monitoring dashboard</li>
+          <li>Paid ad management</li>
+          <li>Dedicated account manager</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 6. ROI -->
+<div class="section">
+  <div class="section-num">Section 06</div>
+  <h2>ROI Projection</h2>
+  <div class="section-body">
+    <table class="roi-table">
+      <thead>
+        <tr><th>Scenario</th><th>Booking Increase</th><th>Annual Revenue</th><th>Added Revenue</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Current</td><td>—</td><td>~$4,800</td><td>—</td></tr>
+        <tr><td>Conservative</td><td>+40%</td><td>~$6,720</td><td class="highlight">+$1,920</td></tr>
+        <tr><td>Moderate</td><td>+70%</td><td>~$8,160</td><td class="highlight">+$3,360</td></tr>
+        <tr><td>Aggressive</td><td>+120%</td><td>~$10,560</td><td class="highlight">+$5,760</td></tr>
+      </tbody>
+    </table>
+    <div class="roi-meta">
+      <div class="item"><div class="val">Month 3–4</div><div class="lbl">Break-even point</div></div>
+      <div class="item"><div class="val">117–159%</div><div class="lbl">Year 1 ROI</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- 7. WHAT WE'VE ALREADY BUILT -->
+<div class="section">
+  <div class="section-num">Section 07</div>
+  <h2>What We've Already Built</h2>
+  <div class="section-body">
+    <div class="built-grid">
+      <div class="built-card">
+        <div class="icon">🌐</div>
+        <h4>Direct Booking Website</h4>
+        <p>Live now: <a href="https://cuzo151.github.io/casa-chunan/" style="color:var(--teal)">cuzo151.github.io/casa-chunan</a> — with SEO targeting NY, NJ & PR travelers</p>
+      </div>
+      <div class="built-card">
+        <div class="icon">🔬</div>
+        <h4>Property & Competitor Analysis</h4>
+        <p>Full market research completed</p>
+      </div>
+      <div class="built-card">
+        <div class="icon">🎬</div>
+        <h4>Demo Marketing Videos</h4>
+        <p>Sample videos showcasing what we create once you provide your property photos & footage</p>
+      </div>
+    </div>
+    <div class="built-callout">
+      This is <em>not just a pitch</em> — we've already started working on your success.
+    </div>
+  </div>
+</div>
+
+<!-- 8. NEXT STEPS -->
+<div class="section">
+  <div class="section-num">Section 08</div>
+  <h2>Next Steps</h2>
+  <div class="section-body">
+    <div class="steps-list">
+      <div class="step-item">
+        <div class="num">1</div>
+        <div><h4>Schedule a 15-Minute Call</h4><p>We'll walk through this proposal and answer any questions.</p></div>
+      </div>
+      <div class="step-item">
+        <div class="num">2</div>
+        <div><h4>Choose Your Package</h4><p>Start with Starter to see results, or jump to Growth for maximum impact — upgrade anytime.</p></div>
+      </div>
+      <div class="step-item">
+        <div class="num">3</div>
+        <div><h4>We Begin Within 48 Hours</h4><p>Listing optimization starts immediately after sign-off.</p></div>
+      </div>
+      <div class="step-item">
+        <div class="num">4</div>
+        <div><h4>First Results in 2–4 Weeks</h4><p>Improved visibility, more inquiries, better conversion rates.</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="brand">Dreamer AI Solutions</div>
+  <div class="contact">Jay LaSalle &nbsp;|&nbsp; jlasalle@dreamerai.io &nbsp;|&nbsp; dreamerai.io</div>
+  <div class="tagline">"Transforming vacation rentals with AI-powered marketing"</div>
+</div>
+
+</body>
+</html>
