@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Casa Chunan — A Tropical Escape in Maunabo, Puerto Rico</title>
+<meta name="description" content="Book your dream tropical getaway at Casa Chunan in Maunabo, Puerto Rico. Pet-friendly, beach access, mountain views. From $172/night.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+--ocean-deep:#0A1628;--ocean-blue:#0077B6;--ocean-mid:#00B4D8;--ocean-light:#90E0EF;
+--green-deep:#2D6A4F;--green-mid:#52B788;
+--sand:#FEFAE0;--sand-dark:#F5E6CA;
+--coral:#FF6B6B;--gold:#D4A574;
+--heading:'Cormorant Garamond',Georgia,serif;
+--body:'DM Sans',system-ui,sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);color:#333;background:var(--sand);overflow-x:hidden;line-height:1.6}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+
+/* ===== HEADER ===== */
+.site-header{position:fixed;top:0;left:0;width:100%;z-index:1000;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;transition:all .4s}
+.site-header.scrolled{background:rgba(10,22,40,.85);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);padding:.7rem 2rem;box-shadow:0 2px 30px rgba(0,0,0,.3)}
+.header-logo{font-family:var(--heading);font-size:1.6rem;font-weight:600;color:#fff;letter-spacing:.04em}
+.header-nav{display:flex;gap:2rem;align-items:center}
+.header-nav a{color:rgba(255,255,255,.85);font-size:.9rem;font-weight:500;transition:color .3s;letter-spacing:.02em}
+.header-nav a:hover{color:var(--coral)}
+.nav-cta{background:var(--coral);color:#fff!important;padding:.55rem 1.4rem;border-radius:50px;font-weight:600;transition:all .3s!important}
+.nav-cta:hover{background:#ff5252;box-shadow:0 0 20px rgba(255,107,107,.4)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;z-index:1001;background:none;border:none;padding:4px}
+.hamburger span{width:26px;height:2.5px;background:#fff;border-radius:2px;transition:all .3s}
+.hamburger.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.hamburger.active span:nth-child(2){opacity:0}
+.hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+@media(max-width:768px){
+.header-nav{position:fixed;top:0;left:0;width:100%;height:100vh;background:rgba(10,22,40,.97);flex-direction:column;justify-content:center;gap:2.5rem;transform:translateX(100%);transition:transform .4s cubic-bezier(.4,0,.2,1)}
+.header-nav.open{transform:translateX(0)}
+.header-nav a{font-size:1.3rem}
+.hamburger{display:flex}
+}
+
+/* ===== HERO ===== */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url('https://a0.muscache.com/im/pictures/prohost-api/Hosting-1153523907384439435/original/33a4c596-1197-4bb4-8cda-78fce9fc084c.jpeg?im_w=1200') center/cover no-repeat;z-index:0}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,22,40,.55) 0%,rgba(10,22,40,.7) 50%,rgba(10,22,40,.9) 100%)}
+.hero-content{position:relative;z-index:2;padding:2rem;max-width:900px}
+.hero h1{font-family:var(--heading);font-size:clamp(3.5rem,10vw,8rem);font-weight:300;color:#fff;line-height:1;letter-spacing:.02em;margin-bottom:.5rem;text-shadow:0 4px 40px rgba(0,0,0,.3)}
+.hero .subtitle{font-size:clamp(1rem,2.5vw,1.4rem);color:rgba(255,255,255,.8);font-weight:300;letter-spacing:.15em;text-transform:uppercase;margin-bottom:2.5rem}
+.btn-coral{display:inline-block;background:var(--coral);color:#fff;padding:1rem 3rem;border-radius:50px;font-family:var(--body);font-size:1.05rem;font-weight:600;letter-spacing:.06em;border:none;cursor:pointer;transition:all .35s;position:relative;overflow:hidden}
+.btn-coral:hover{background:#ff5252;transform:translateY(-2px);box-shadow:0 8px 30px rgba(255,107,107,.45)}
+
+/* Fireflies */
+.fireflies{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+.firefly{position:absolute;width:4px;height:4px;background:rgba(255,235,150,.8);border-radius:50;animation:fly linear infinite;box-shadow:0 0 8px 2px rgba(255,235,150,.5)}
+@keyframes fly{0%{opacity:0;transform:translateY(0) translateX(0)}10%{opacity:1}90%{opacity:1}100%{opacity:0;transform:translateY(-100vh) translateX(80px)}}
+.firefly:nth-child(1){left:10%;bottom:-10px;animation-duration:8s;animation-delay:0s;width:3px;height:3px}
+.firefly:nth-child(2){left:25%;bottom:-10px;animation-duration:11s;animation-delay:1.5s}
+.firefly:nth-child(3){left:45%;bottom:-10px;animation-duration:9s;animation-delay:3s;width:5px;height:5px}
+.firefly:nth-child(4){left:60%;bottom:-10px;animation-duration:12s;animation-delay:2s}
+.firefly:nth-child(5){left:75%;bottom:-10px;animation-duration:10s;animation-delay:4s;width:3px;height:3px}
+.firefly:nth-child(6){left:88%;bottom:-10px;animation-duration:7s;animation-delay:.5s}
+.firefly:nth-child(7){left:35%;bottom:-10px;animation-duration:13s;animation-delay:5s;width:3px;height:3px}
+.firefly:nth-child(8){left:55%;bottom:-10px;animation-duration:9.5s;animation-delay:6s}
+.firefly:nth-child(9){left:5%;bottom:-10px;animation-duration:10.5s;animation-delay:7s;width:5px;height:5px}
+.firefly:nth-child(10){left:92%;bottom:-10px;animation-duration:8.5s;animation-delay:3.5s}
+
+/* Wave divider */
+.wave-divider{position:absolute;bottom:-2px;left:0;width:100%;z-index:3}
+.wave-divider svg{display:block;width:100%;height:auto}
+
+/* ===== SECTIONS ===== */
+section{padding:5rem 2rem}
+.section-title{font-family:var(--heading);font-size:clamp(2rem,5vw,3.2rem);font-weight:400;text-align:center;margin-bottom:.5rem;color:var(--ocean-deep)}
+.section-subtitle{text-align:center;color:#666;font-size:1.05rem;margin-bottom:3rem;max-width:600px;margin-left:auto;margin-right:auto}
+.title-line{width:80px;height:3px;background:linear-gradient(90deg,var(--coral),var(--gold));margin:1rem auto 1.5rem;border-radius:2px}
+
+/* ===== ABOUT ===== */
+.about{background:var(--sand)}
+.about-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1.4fr;gap:4rem;align-items:center}
+.host-photo-wrap{position:relative;display:flex;justify-content:center}
+.host-photo{width:280px;height:280px;border-radius:50%;object-fit:cover;border:5px solid var(--gold);box-shadow:0 12px 40px rgba(0,0,0,.12);position:relative;z-index:1}
+.host-photo-wrap::before{content:'';position:absolute;width:300px;height:300px;border-radius:50%;border:2px dashed var(--green-mid);top:50%;left:50%;transform:translate(-50%,-50%);animation:spin 30s linear infinite}
+@keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
+.about-text h3{font-family:var(--heading);font-size:1.8rem;color:var(--ocean-deep);margin-bottom:.3rem;font-weight:500}
+.about-text .host-label{color:var(--gold);font-weight:600;font-size:.9rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:1.2rem}
+.about-text p{color:#555;line-height:1.8;font-size:1.05rem}
+.leaf-decor{position:absolute;opacity:.08;font-size:12rem;right:-2rem;bottom:-3rem;z-index:0;pointer-events:none}
+@media(max-width:768px){.about-grid{grid-template-columns:1fr;text-align:center;gap:2rem}.host-photo{width:220px;height:220px}.host-photo-wrap::before{width:240px;height:240px}}
+
+/* ===== GALLERY ===== */
+.gallery{background:#fff;padding-bottom:4rem}
+.gallery-grid{max-width:1300px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:8px;grid-auto-rows:250px}
+.gallery-item{position:relative;overflow:hidden;border-radius:8px;cursor:pointer}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.4,0,.2,1)}
+.gallery-item:hover img{transform:scale(1.08)}
+.gallery-caption{position:absolute;bottom:0;left:0;right:0;padding:1rem;background:linear-gradient(transparent,rgba(0,0,0,.7));color:#fff;font-size:.85rem;font-weight:500;transform:translateY(100%);transition:transform .4s;letter-spacing:.02em}
+.gallery-item:hover .gallery-caption{transform:translateY(0)}
+.gallery-item.wide{grid-column:span 2}
+.gallery-item.tall{grid-row:span 2}
+.img-placeholder{width:100%;height:100%;background:linear-gradient(135deg,var(--ocean-blue),var(--green-mid));display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.5);font-size:2rem}
+@media(max-width:900px){.gallery-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:200px}}
+@media(max-width:500px){.gallery-grid{grid-template-columns:1fr;grid-auto-rows:250px}.gallery-item.wide,.gallery-item.tall{grid-column:span 1;grid-row:span 1}}
+
+/* ===== LIGHTBOX ===== */
+.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.95);z-index:2000;display:none;align-items:center;justify-content:center;opacity:0;transition:opacity .3s}
+.lightbox.active{display:flex;opacity:1}
+.lightbox img{max-width:90vw;max-height:85vh;object-fit:contain;border-radius:4px}
+.lb-close{position:absolute;top:1.5rem;right:2rem;color:#fff;font-size:2.5rem;cursor:pointer;z-index:2001;background:none;border:none;font-family:var(--body);transition:transform .3s}
+.lb-close:hover{transform:rotate(90deg)}
+.lb-arrow{position:absolute;top:50%;transform:translateY(-50%);color:#fff;font-size:3rem;cursor:pointer;background:rgba(255,255,255,.1);border:none;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:background .3s;font-family:var(--body)}
+.lb-arrow:hover{background:rgba(255,255,255,.2)}
+.lb-prev{left:1.5rem}
+.lb-next{right:1.5rem}
+.lb-counter{position:absolute;bottom:1.5rem;left:50%;transform:translateX(-50%);color:rgba(255,255,255,.6);font-size:.9rem}
+
+/* ===== AMENITIES ===== */
+.amenities{background:var(--ocean-deep);color:#fff}
+.amenities .section-title{color:#fff}
+.amenities .section-subtitle{color:rgba(255,255,255,.6)}
+.amenity-categories{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1.5rem}
+.amenity-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:2rem 1.5rem;transition:all .4s;text-align:center}
+.amenity-card:hover{background:rgba(255,255,255,.1);box-shadow:0 0 30px rgba(0,119,182,.2);transform:translateY(-4px)}
+.amenity-icon{font-size:2.2rem;margin-bottom:.8rem}
+.amenity-card h4{font-family:var(--heading);font-size:1.3rem;margin-bottom:.8rem;font-weight:500;color:var(--ocean-light)}
+.amenity-card ul{list-style:none;text-align:left}
+.amenity-card li{padding:.3rem 0;color:rgba(255,255,255,.75);font-size:.92rem;position:relative;padding-left:1.2rem}
+.amenity-card li::before{content:'✓';position:absolute;left:0;color:var(--green-mid);font-weight:700}
+
+/* ===== LOCATION ===== */
+.location{background:var(--sand)}
+.location-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+.map-wrap{border-radius:16px;overflow:hidden;box-shadow:0 8px 30px rgba(0,0,0,.1);aspect-ratio:4/3}
+.map-wrap iframe{width:100%;height:100%;border:0}
+.attractions-list{display:flex;flex-direction:column;gap:1rem}
+.attraction{display:flex;align-items:center;gap:1.2rem;background:#fff;padding:1.2rem 1.5rem;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,.06);transition:all .3s}
+.attraction:hover{transform:translateX(6px);box-shadow:0 4px 20px rgba(0,0,0,.1)}
+.attraction-emoji{font-size:2rem;flex-shrink:0}
+.attraction h4{font-family:var(--heading);font-size:1.15rem;color:var(--ocean-deep);font-weight:600}
+.attraction p{font-size:.88rem;color:#888}
+@media(max-width:768px){.location-grid{grid-template-columns:1fr}}
+
+/* ===== REVIEWS ===== */
+.reviews{background:#fff}
+.rating-display{text-align:center;margin-bottom:3rem}
+.rating-number{font-family:var(--heading);font-size:5rem;font-weight:300;color:var(--ocean-deep);line-height:1}
+.rating-stars{color:var(--gold);font-size:1.8rem;letter-spacing:4px;margin:.5rem 0}
+.rating-label{color:#888;font-size:.95rem}
+.reviews-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem}
+.review-card{background:var(--sand);padding:2rem;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,.05);position:relative;transition:transform .3s}
+.review-card:hover{transform:translateY(-4px)}
+.review-card::before{content:'"';font-family:var(--heading);font-size:4rem;color:var(--coral);opacity:.3;position:absolute;top:.5rem;left:1.2rem;line-height:1}
+.review-card p{font-style:italic;color:#555;line-height:1.7;margin-bottom:1rem;position:relative;z-index:1}
+.review-author{font-weight:600;color:var(--ocean-deep);font-size:.9rem}
+
+/* ===== BOOKING CTA ===== */
+.booking-cta{background:linear-gradient(180deg,var(--ocean-deep) 0%,#0d1f3c 100%);text-align:center;color:#fff;padding:6rem 2rem}
+.booking-cta h2{font-family:var(--heading);font-size:clamp(2rem,5vw,3.2rem);font-weight:300;margin-bottom:1rem}
+.price-display{font-family:var(--heading);font-size:clamp(2.5rem,6vw,4rem);color:var(--coral);margin-bottom:.5rem;font-weight:300}
+.price-display span{font-size:.45em;color:rgba(255,255,255,.5);font-family:var(--body)}
+.price-note{color:rgba(255,255,255,.5);font-size:.9rem;margin-bottom:2.5rem}
+.cta-buttons{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:3rem}
+.btn-outline{display:inline-block;color:#fff;padding:1rem 2.5rem;border-radius:50px;font-size:1rem;font-weight:600;border:2px solid rgba(255,255,255,.3);transition:all .35s;cursor:pointer;background:transparent}
+.btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.1)}
+.trust-badges{display:flex;gap:2rem;justify-content:center;flex-wrap:wrap}
+.trust-badge{color:rgba(255,255,255,.7);font-size:.95rem;display:flex;align-items:center;gap:.4rem}
+
+/* ===== FOOTER ===== */
+.site-footer{background:var(--ocean-deep);color:rgba(255,255,255,.5);text-align:center;padding:3rem 2rem}
+.site-footer a{color:var(--coral);transition:color .3s}
+.site-footer a:hover{color:#ff8888}
+.footer-links{display:flex;gap:1.5rem;justify-content:center;margin-bottom:1rem}
+.footer-links a{font-size:1.3rem}
+
+/* ===== SCROLL ANIMATIONS ===== */
+.reveal{opacity:0;transform:translateY(30px);transition:all .7s cubic-bezier(.4,0,.2,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-left{opacity:0;transform:translateX(-40px);transition:all .7s cubic-bezier(.4,0,.2,1)}
+.reveal-left.visible{opacity:1;transform:translateX(0)}
+.reveal-right{opacity:0;transform:translateX(40px);transition:all .7s cubic-bezier(.4,0,.2,1)}
+.reveal-right.visible{opacity:1;transform:translateX(0)}
+
+/* ===== REDUCED MOTION ===== */
+@media(prefers-reduced-motion:reduce){
+.reveal,.reveal-left,.reveal-right{opacity:1;transform:none;transition:none}
+.firefly{animation:none!important;opacity:0}
+.host-photo-wrap::before{animation:none}
+html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header" id="siteHeader">
+  <a href="#" class="header-logo">Casa Chunan</a>
+  <nav class="header-nav" id="navMenu">
+    <a href="#about">About</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#amenities">Amenities</a>
+    <a href="#location">Location</a>
+    <a href="#reviews">Reviews</a>
+    <a href="https://airbnb.com/h/casachunan" target="_blank" rel="noopener" class="nav-cta">Book Now</a>
+  </nav>
+  <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="fireflies">
+    <div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div>
+  </div>
+  <div class="hero-content">
+    <h1>Casa Chunan</h1>
+    <p class="subtitle">A Tropical Escape in Maunabo, Puerto Rico</p>
+    <a href="#booking" class="btn-coral">Book Your Escape</a>
+  </div>
+  <div class="wave-divider">
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none"><path fill="#FEFAE0" d="M0,64L48,69.3C96,75,192,85,288,80C384,75,480,53,576,48C672,43,768,53,864,64C960,75,1056,85,1152,80C1248,75,1344,53,1392,42.7L1440,32L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z"/></svg>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="section-title reveal">Meet Your Host</div>
+  <div class="title-line reveal"></div>
+  <div class="about-grid">
+    <div class="host-photo-wrap reveal-left">
+      <img src="https://a0.muscache.com/im/pictures/user/User-573191146/original/7d7af646-eb6c-400a-a823-3c838785a6e6.jpeg?im_w=240" alt="Kimlee — Host of Casa Chunan" class="host-photo" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#0077B6,#52B788)';this.style.border='5px solid #D4A574'">
+    </div>
+    <div class="about-text reveal-right" style="position:relative">
+      <h3>Kimlee</h3>
+      <div class="host-label">★ Superhost</div>
+      <p>Raised in New York, heart in Puerto Rico. After 30 years in IT, Kimlee followed her dream to create a tropical sanctuary in the mountains of Maunabo. Casa Chunan isn't just a rental — it's an invitation to experience authentic Puerto Rico.</p>
+      <p style="margin-top:1rem;color:#888;font-size:.95rem">From the coquí frogs singing you to sleep to the morning mountain breeze with your coffee — every detail has been crafted with love.</p>
+      <div class="leaf-decor">🌿</div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+  <div class="section-title reveal">Explore the Space</div>
+  <div class="title-line reveal"></div>
+  <p class="section-subtitle reveal">3 bedrooms · 1 bath · Full kitchen · Mountain views · Beach access</p>
+  <div class="gallery-grid" id="galleryGrid"></div>
+</section>
+
+<!-- AMENITIES -->
+<section class="amenities" id="amenities">
+  <div class="section-title reveal">Everything You Need</div>
+  <div class="title-line reveal"></div>
+  <p class="section-subtitle reveal">Thoughtfully equipped for comfort, adventure, and relaxation</p>
+  <div class="amenity-categories">
+    <div class="amenity-card reveal">
+      <div class="amenity-icon">🏠</div>
+      <h4>Essentials</h4>
+      <ul><li>High-speed WiFi</li><li>Air conditioning</li><li>Free parking</li><li>Washer & Dryer</li></ul>
+    </div>
+    <div class="amenity-card reveal">
+      <div class="amenity-icon">🍳</div>
+      <h4>Kitchen</h4>
+      <ul><li>Full kitchen</li><li>Coffee maker</li><li>Dishes & utensils</li><li>Stove & microwave</li><li>Refrigerator</li></ul>
+    </div>
+    <div class="amenity-card reveal">
+      <div class="amenity-icon">🌿</div>
+      <h4>Outdoor</h4>
+      <ul><li>Beach access</li><li>Hammock</li><li>BBQ grill</li><li>Outdoor shower</li><li>Tropical garden</li></ul>
+    </div>
+    <div class="amenity-card reveal">
+      <div class="amenity-icon">🐾</div>
+      <h4>Pet & Family</h4>
+      <ul><li>Pet-friendly</li><li>Pack 'n play</li><li>High chair</li><li>Board games</li></ul>
+    </div>
+    <div class="amenity-card reveal">
+      <div class="amenity-icon">💻</div>
+      <h4>Work & Connect</h4>
+      <ul><li>Dedicated workspace</li><li>Fast WiFi</li><li>Smart TV</li></ul>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section class="location" id="location">
+  <div class="section-title reveal">Discover Maunabo</div>
+  <div class="title-line reveal"></div>
+  <p class="section-subtitle reveal">Nestled between mountains and sea on Puerto Rico's enchanting southeast coast</p>
+  <div class="location-grid">
+    <div class="map-wrap reveal-left">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30312.!2d-65.9!3d18.007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c0490a9aef5a1e3%3A0x5b1a1b8b1c1e1e1e!2sMaunabo%2C%20Puerto%20Rico!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map of Maunabo, Puerto Rico"></iframe>
+    </div>
+    <div class="attractions-list reveal-right">
+      <div class="attraction"><div class="attraction-emoji">🏖️</div><div><h4>Playa Los Bohíos</h4><p>5 min drive</p></div></div>
+      <div class="attraction"><div class="attraction-emoji">🏗️</div><div><h4>Punta Tuna Lighthouse</h4><p>10 min drive</p></div></div>
+      <div class="attraction"><div class="attraction-emoji">🌊</div><div><h4>Bioluminescent Bay</h4><p>45 min drive · Fajardo</p></div></div>
+      <div class="attraction"><div class="attraction-emoji">🌴</div><div><h4>El Yunque Rainforest</h4><p>1 hr drive</p></div></div>
+      <div class="attraction"><div class="attraction-emoji">🍽️</div><div><h4>Local Seafood Restaurants</h4><p>Walking distance</p></div></div>
+      <div class="attraction"><div class="attraction-emoji">🐸</div><div><h4>Coquí Frog Chorus</h4><p>Right outside your door</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="section-title reveal">Guest Experiences</div>
+  <div class="title-line reveal"></div>
+  <div class="rating-display reveal">
+    <div class="rating-number">5.0</div>
+    <div class="rating-stars">★★★★★</div>
+    <div class="rating-label">Outstanding · Guest Favorite</div>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card reveal">
+      <p>The coquí frogs singing us to sleep every night was magical. Kimlee's place is a hidden gem.</p>
+      <div class="review-author">— Maria R.</div>
+    </div>
+    <div class="review-card reveal">
+      <p>Perfect family getaway. The kids loved the beach and we loved the peace and quiet.</p>
+      <div class="review-author">— James T.</div>
+    </div>
+    <div class="review-card reveal">
+      <p>Kimlee goes above and beyond. The house is spotless and the mountain views are incredible.</p>
+      <div class="review-author">— Sarah K.</div>
+    </div>
+    <div class="review-card reveal">
+      <p>We brought our dog and he had the time of his life. Can't wait to come back!</p>
+      <div class="review-author">— Carlos M.</div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING CTA -->
+<section class="booking-cta" id="booking">
+  <h2 class="reveal">Ready for Your Tropical Escape?</h2>
+  <div class="price-display reveal">$172 <span>/ night</span></div>
+  <p class="price-note reveal">Avg. nightly rate · Minimum stay may apply</p>
+  <div class="cta-buttons reveal">
+    <a href="https://airbnb.com/h/casachunan" target="_blank" rel="noopener" class="btn-coral">Book on Airbnb</a>
+    <a href="https://airbnb.com/h/casachunan" target="_blank" rel="noopener" class="btn-outline">Message Kimlee</a>
+  </div>
+  <div class="trust-badges reveal">
+    <div class="trust-badge">★ 5.0 Rating</div>
+    <div class="trust-badge">🏠 Superhost</div>
+    <div class="trust-badge">🐾 Pet Friendly</div>
+    <div class="trust-badge">🏖️ Beach Access</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-links">
+    <a href="https://airbnb.com/h/casachunan" target="_blank" rel="noopener" title="Airbnb">🏡</a>
+    <a href="#" title="Instagram">📷</a>
+    <a href="#" title="Facebook">📘</a>
+  </div>
+  <p>© 2025 Casa Chunan · Maunabo, Puerto Rico</p>
+  <p style="margin-top:.5rem;font-size:.8rem">Website by <a href="https://dreamerai.io" target="_blank" rel="noopener">Dreamer AI Solutions</a></p>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" id="lbClose">&times;</button>
+  <button class="lb-arrow lb-prev" id="lbPrev">&#8249;</button>
+  <img src="" alt="Gallery image" id="lbImg">
+  <button class="lb-arrow lb-next" id="lbNext">&#8250;</button>
+  <div class="lb-counter" id="lbCounter"></div>
+</div>
+
+<script>
+// Gallery data
+const galleryImages = [
+  {src:'https://a0.muscache.com/im/pictures/miso/Hosting-1153523907384439435/original/985d5270-00b1-4741-8dd4-528a866f76b9.jpeg?im_w=1200',caption:'Living Room',cls:'wide'},
+  {src:'https://a0.muscache.com/im/pictures/miso/Hosting-1153523907384439435/original/96563713-18ca-4ba4-801b-b0d0e04ac180.jpeg?im_w=1200',caption:'Living Room',cls:'tall'},
+  {src:'https://a0.muscache.com/im/pictures/prohost-api/Hosting-1153523907384439435/original/33a4c596-1197-4bb4-8cda-78fce9fc084c.jpeg?im_w=1200',caption:'Exterior',cls:''},
+  {src:'https://a0.muscache.com/im/pictures/miso/Hosting-1153523907384439435/original/2fe6af5f-cdcd-4618-a722-45e0e95378e8.jpeg?im_w=1200',caption:'Bedroom',cls:''},
+  {src:'https://a0.muscache.com/im/pictures/miso/Hosting-1153523907384439435/original/a0954af8-cd31-4b07-b8ed-bb07d196e091.jpeg?im_w=1200',caption:'Bedroom',cls:'wide'},
+  {src:'https://a0.muscache.com/im/pictures/miso/Hosting-1153523907384439435/original/f34e95d6-d4a4-4917-ad4a-91038ddded04.jpeg?im_w=1200',caption:'Bedroom',cls:''},
+  {src:'https://a0.muscache.com/im/pictures/miso/Hosting-1153523907384439435/original/a7b3b957-c0a0-42cf-8e0e-b05e404eebbb.jpeg?im_w=1200',caption:'Kitchen',cls:'tall'},
+  {src:'https://a0.muscache.com/im/pictures/prohost-api/Hosting-1153523907384439435/original/e825998a-3bf3-4c7b-9aa2-290d8bdae11c.jpeg?im_w=1200',caption:'Kitchen',cls:''},
+  {src:'https://a0.muscache.com/im/pictures/miso/Hosting-1153523907384439435/original/2db038cc-5f1e-4a4b-a42e-33e3ae8fb425.jpeg?im_w=1200',caption:'Kitchen',cls:''},
+  {src:'https://a0.muscache.com/im/pictures/miso/Hosting-1153523907384439435/original/1fc12f29-f16b-41d6-ac23-b056f1b5ace5.jpeg?im_w=1200',caption:'Dining Area',cls:'wide'},
+  {src:'https://a0.muscache.com/im/pictures/miso/Hosting-1153523907384439435/original/684ccaa1-b021-4591-8bff-d01a8a8d0869.jpeg?im_w=1200',caption:'Dining Area',cls:''},
+  {src:'https://a0.muscache.com/im/pictures/miso/Hosting-1153523907384439435/original/5740acf2-a458-4ccd-bb92-09930baaccf7.jpeg?im_w=1200',caption:'Bathroom',cls:''},
+  {src:'https://a0.muscache.com/im/pictures/prohost-api/Hosting-1153523907384439435/original/87e4e953-fd17-43e7-9a16-ede5532c4ffd.jpeg?im_w=1200',caption:'Interior',cls:''},
+  {src:'https://a0.muscache.com/im/pictures/miso/Hosting-1153523907384439435/original/65dda5d3-9574-4c6d-a4f1-df71e02bb3ee.jpeg?im_w=1200',caption:'Outdoor Space',cls:'wide'}
+];
+
+// Build gallery
+const grid=document.getElementById('galleryGrid');
+galleryImages.forEach((img,i)=>{
+  const div=document.createElement('div');
+  div.className='gallery-item reveal'+(img.cls?' '+img.cls:'');
+  div.innerHTML=`<img src="${img.src}" alt="${img.caption}" loading="lazy" onerror="this.parentElement.innerHTML='<div class=img-placeholder>🌴</div>'"><div class="gallery-caption">${img.caption}</div>`;
+  div.addEventListener('click',()=>openLightbox(i));
+  grid.appendChild(div);
+});
+
+// Lightbox
+let currentImg=0;
+const lb=document.getElementById('lightbox'),lbImg=document.getElementById('lbImg'),lbCounter=document.getElementById('lbCounter');
+function openLightbox(i){currentImg=i;updateLb();lb.classList.add('active');document.body.style.overflow='hidden'}
+function closeLightbox(){lb.classList.remove('active');document.body.style.overflow=''}
+function updateLb(){lbImg.src=galleryImages[currentImg].src;lbCounter.textContent=`${currentImg+1} / ${galleryImages.length}`}
+document.getElementById('lbClose').onclick=closeLightbox;
+document.getElementById('lbPrev').onclick=()=>{currentImg=(currentImg-1+galleryImages.length)%galleryImages.length;updateLb()};
+document.getElementById('lbNext').onclick=()=>{currentImg=(currentImg+1)%galleryImages.length;updateLb()};
+lb.addEventListener('click',e=>{if(e.target===lb)closeLightbox()});
+document.addEventListener('keydown',e=>{if(!lb.classList.contains('active'))return;if(e.key==='Escape')closeLightbox();if(e.key==='ArrowLeft')document.getElementById('lbPrev').click();if(e.key==='ArrowRight')document.getElementById('lbNext').click()});
+
+// Scroll header
+const header=document.getElementById('siteHeader');
+window.addEventListener('scroll',()=>{header.classList.toggle('scrolled',window.scrollY>80)},{passive:true});
+
+// Hamburger
+const hamburger=document.getElementById('hamburger'),navMenu=document.getElementById('navMenu');
+hamburger.addEventListener('click',()=>{hamburger.classList.toggle('active');navMenu.classList.toggle('open')});
+navMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{hamburger.classList.remove('active');navMenu.classList.remove('open')}));
+
+// Scroll reveal
+const mo=window.matchMedia('(prefers-reduced-motion: reduce)');
+if(!mo.matches){
+  const observer=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}})},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>observer.observe(el));
+}else{
+  document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>el.classList.add('visible'));
+}
+</script>
+</body>
+</html>
