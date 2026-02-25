@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project Intake — Dreamer AI Solutions</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'DM Sans',system-ui,sans-serif;background:#f4f4f4;color:#333;line-height:1.6}
+.form-wrap{max-width:720px;margin:0 auto;padding:20px}
+.header{background:linear-gradient(135deg,#0F0F1A,#1A1A2E,#2a2040);padding:40px 32px;border-radius:20px 20px 0 0;text-align:center}
+.header h1{font-family:'Cormorant Garamond',Georgia,serif;color:#C5A55A;font-size:2rem;font-weight:300}
+.header p{color:rgba(255,255,255,.6);font-size:.9rem;margin-top:8px}
+.header .badge{display:inline-block;background:rgba(197,165,90,.15);border:1px solid rgba(197,165,90,.3);color:#C5A55A;padding:4px 16px;border-radius:50px;font-size:.75rem;font-weight:600;margin-top:16px;letter-spacing:.05em}
+.form-body{background:#fff;padding:32px;border-radius:0 0 20px 20px;box-shadow:0 4px 24px rgba(0,0,0,.06)}
+.intro{background:#fffef5;border-left:3px solid #C5A55A;padding:16px 20px;margin-bottom:28px;border-radius:0 8px 8px 0;font-size:.9rem;color:#555}
+.section-title{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.3rem;color:#1A1A2E;margin:28px 0 16px;padding-bottom:8px;border-bottom:2px solid #C5A55A;display:flex;align-items:center;gap:8px}
+.section-title:first-of-type{margin-top:0}
+label{display:block;font-weight:500;font-size:.88rem;color:#1A1A2E;margin-bottom:4px;margin-top:16px}
+label.sub{font-weight:400;color:#555;font-size:.82rem}
+input[type="text"],input[type="email"],input[type="url"],input[type="tel"],textarea,select{width:100%;padding:12px 16px;border:1px solid #ddd;border-radius:10px;font-family:inherit;font-size:.9rem;background:#fafaf7;transition:border .2s}
+input:focus,textarea:focus,select:focus{outline:none;border-color:#C5A55A;background:#fff}
+textarea{resize:vertical;min-height:100px}
+.checkbox-group{margin-top:8px}
+.checkbox-group label{display:flex;align-items:flex-start;gap:10px;font-weight:400;font-size:.88rem;color:#444;margin-top:10px;cursor:pointer}
+.checkbox-group input[type="checkbox"]{margin-top:3px;accent-color:#C5A55A;width:18px;height:18px;flex-shrink:0}
+.radio-group{margin-top:8px}
+.radio-group label{display:flex;align-items:center;gap:10px;font-weight:400;font-size:.88rem;color:#444;margin-top:8px;cursor:pointer}
+.radio-group input[type="radio"]{accent-color:#C5A55A;width:18px;height:18px;flex-shrink:0}
+.priority-note{font-size:.78rem;color:#999;margin-top:4px}
+.submit-section{text-align:center;margin-top:36px;padding-top:24px;border-top:1px solid #eee}
+.submit-btn{background:#C5A55A;color:#1A1A2E;border:none;padding:16px 48px;border-radius:50px;font-size:1rem;font-weight:700;cursor:pointer;font-family:inherit;letter-spacing:.02em;transition:background .2s}
+.submit-btn:hover{background:#b8943f}
+.footer-note{text-align:center;margin-top:16px;font-size:.78rem;color:#999}
+.divider{height:1px;background:#eee;margin:28px 0}
+</style>
+</head>
+<body>
+<div class="form-wrap">
+
+<div class="header">
+  <h1>Project Discovery Form</h1>
+  <p>Help us understand exactly what you need — so we can deliver exactly what works.</p>
+  <div class="badge">CONFIDENTIAL — DREAMER AI SOLUTIONS</div>
+</div>
+
+<div class="form-body">
+
+<div class="intro">
+Hey Patrick — great chatting today. To make sure we capture everything and don't miss a detail, please fill this out at your convenience. Take your time — the more detail, the better we can scope and price it right. — Jason
+</div>
+
+<!-- SECTION 1: BUSINESS INFO -->
+<div class="section-title">📋 Business Information</div>
+
+<label>Business #1 — Name</label>
+<input type="text" placeholder="e.g., North Jersey Pet Sitters LLC">
+
+<label>Website</label>
+<input type="url" placeholder="https://www.northjerseypetsitters.com">
+
+<label>Business #2 — Name (if applicable)</label>
+<input type="text" placeholder="e.g., [Finance/Insurance Company Name]">
+
+<label>Website</label>
+<input type="url" placeholder="https://...">
+
+<label>Any Additional Businesses or Projects?</label>
+<textarea placeholder="List any other businesses, side projects, or personal sites you'd like us to look at..."></textarea>
+
+<label>Your Name</label>
+<input type="text" placeholder="Patrick Coyle">
+
+<label>Best Email</label>
+<input type="email" placeholder="patrick.r.coyle@gmail.com">
+
+<label>Best Phone</label>
+<input type="tel" placeholder="(973) 555-1234">
+
+<label>Preferred Contact Method</label>
+<div class="radio-group">
+  <label><input type="radio" name="contact_pref" value="email"> Email</label>
+  <label><input type="radio" name="contact_pref" value="phone"> Phone/Text</label>
+  <label><input type="radio" name="contact_pref" value="either"> Either</label>
+</div>
+
+<!-- SECTION 2: PET SITTERS -->
+<div class="section-title">🐾 North Jersey Pet Sitters — Needs</div>
+
+<label>What are the top problems you want solved?</label>
+<textarea placeholder="e.g., not showing up on Google, need more clients in Bergen County, website looks outdated..."></textarea>
+
+<label>Which services are you interested in? (check all that apply)</label>
+<div class="checkbox-group">
+  <label><input type="checkbox"> SEO — Rank higher on Google for local searches</label>
+  <label><input type="checkbox"> Google Business Profile — Setup & optimization</label>
+  <label><input type="checkbox"> Website Fixes — Fix broken pages, speed, mobile experience</label>
+  <label><input type="checkbox"> Website Redesign — Full rebuild from scratch</label>
+  <label><input type="checkbox"> Social Media Content — Regular posts on Facebook/Instagram</label>
+  <label><input type="checkbox"> Google Ads — Pay-per-click advertising</label>
+  <label><input type="checkbox"> Meta/Facebook Ads — Paid social campaigns</label>
+  <label><input type="checkbox"> Review Generation — Get more Google reviews automatically</label>
+  <label><input type="checkbox"> Email Marketing — Newsletters, promotions, client retention</label>
+  <label><input type="checkbox"> AI Voice Agent — Answer calls 24/7, book appointments</label>
+  <label><input type="checkbox"> AI Website Chatbot — Convert visitors to leads</label>
+  <label><input type="checkbox"> Content/Blog Writing — SEO articles for your site</label>
+  <label><input type="checkbox"> Video Content — Promo videos, Reels, shorts</label>
+  <label><input type="checkbox"> Other (describe below)</label>
+</div>
+
+<label>Any specific towns or areas you want to target?</label>
+<textarea placeholder="e.g., Montclair, Ridgewood, Wayne, Hackensack, Morristown..."></textarea>
+
+<label>Who are your top competitors?</label>
+<textarea placeholder="Names or websites of pet care businesses you compete with..."></textarea>
+
+<label>What's your current monthly marketing budget (if any)?</label>
+<div class="radio-group">
+  <label><input type="radio" name="budget_pet" value="0"> $0 — No current spend</label>
+  <label><input type="radio" name="budget_pet" value="500"> Under $500/mo</label>
+  <label><input type="radio" name="budget_pet" value="1000"> $500 — $1,000/mo</label>
+  <label><input type="radio" name="budget_pet" value="2000"> $1,000 — $2,000/mo</label>
+  <label><input type="radio" name="budget_pet" value="2000+"> $2,000+/mo</label>
+</div>
+
+<label>What does success look like in 90 days?</label>
+<textarea placeholder="e.g., 10 new clients/month, first page on Google for 'dog walker Bergen County', 50 new reviews..."></textarea>
+
+<!-- SECTION 3: FINANCE/INSURANCE -->
+<div class="section-title">🏦 Finance / Insurance Company — Needs</div>
+
+<label>Brief description of the business</label>
+<textarea placeholder="What type of insurance/financial services? Service area? Target clients?"></textarea>
+
+<label>What are the top problems you want solved?</label>
+<textarea placeholder="e.g., missed calls, slow lead follow-up, need more policy holders, no online presence..."></textarea>
+
+<label>Which services are you interested in? (check all that apply)</label>
+<div class="checkbox-group">
+  <label><input type="checkbox"> SEO — Rank higher on Google</label>
+  <label><input type="checkbox"> Google Business Profile — Setup & optimization</label>
+  <label><input type="checkbox"> Website Redesign or Fixes</label>
+  <label><input type="checkbox"> AI Voice Agent — 24/7 call handling, quote intake, appointment booking</label>
+  <label><input type="checkbox"> AI Website Chatbot — Quote funnel, lead capture</label>
+  <label><input type="checkbox"> Speed-to-Lead — Instant follow-up on web form submissions</label>
+  <label><input type="checkbox"> Policy Renewal Automation — 90/60/30-day reminders</label>
+  <label><input type="checkbox"> Claims Intake Automation — First Notice of Loss</label>
+  <label><input type="checkbox"> Review & Reputation Management</label>
+  <label><input type="checkbox"> Social Media Marketing</label>
+  <label><input type="checkbox"> Google/Meta Ads</label>
+  <label><input type="checkbox"> Email Campaigns — Newsletters, cross-sell, win-back</label>
+  <label><input type="checkbox"> Client Reactivation — Win back lapsed clients</label>
+  <label><input type="checkbox"> Compliance / Document Automation</label>
+  <label><input type="checkbox"> Video Content / Promo Videos</label>
+  <label><input type="checkbox"> Other (describe below)</label>
+</div>
+
+<label>Current marketing spend for this business?</label>
+<div class="radio-group">
+  <label><input type="radio" name="budget_fin" value="0"> $0 — No current spend</label>
+  <label><input type="radio" name="budget_fin" value="1000"> Under $1,000/mo</label>
+  <label><input type="radio" name="budget_fin" value="2500"> $1,000 — $2,500/mo</label>
+  <label><input type="radio" name="budget_fin" value="5000"> $2,500 — $5,000/mo</label>
+  <label><input type="radio" name="budget_fin" value="5000+"> $5,000+/mo</label>
+</div>
+
+<label>What does success look like in 90 days?</label>
+<textarea placeholder="e.g., 20 new policies/month, zero missed calls, 100+ Google reviews..."></textarea>
+
+<!-- SECTION 4: PERSONAL SITE -->
+<div class="section-title">🌐 Personal Website / Other Projects</div>
+
+<label>Do you have a personal website or any other projects you'd like help with?</label>
+<textarea placeholder="Describe any personal brand site, portfolio, side projects, or other digital needs..."></textarea>
+
+<label>What are the goals for this site/project?</label>
+<textarea placeholder="e.g., personal branding, thought leadership, lead generation..."></textarea>
+
+<!-- SECTION 5: PRIORITIES -->
+<div class="section-title">🎯 Priorities & Timeline</div>
+
+<label>Rank your priorities (1 = most urgent)</label>
+<div class="checkbox-group">
+  <label><input type="checkbox"> 🐾 Pet Sitters — needs attention first</label>
+  <label><input type="checkbox"> 🏦 Finance/Insurance — needs attention first</label>
+  <label><input type="checkbox"> 🌐 Personal site — needs attention first</label>
+  <label><input type="checkbox"> All equally important</label>
+</div>
+
+<label>Ideal start date</label>
+<div class="radio-group">
+  <label><input type="radio" name="timeline" value="asap"> ASAP — ready to go</label>
+  <label><input type="radio" name="timeline" value="2weeks"> Within 2 weeks</label>
+  <label><input type="radio" name="timeline" value="month"> Within a month</label>
+  <label><input type="radio" name="timeline" value="exploring"> Just exploring for now</label>
+</div>
+
+<label>Anything else we should know?</label>
+<textarea placeholder="Any compliance requirements, brand guidelines, preferences, concerns, or questions? Anything you mentioned on our call that you want to make sure we capture..."></textarea>
+
+<div class="divider"></div>
+
+<div class="submit-section">
+  <button class="submit-btn" onclick="submitForm()">Submit Discovery Form →</button>
+</div>
+<div class="footer-note">
+  Your responses are confidential and will only be used to build your custom proposal.<br>
+  <strong>Dreamer AI Solutions</strong> · dreamerai.io
+</div>
+
+</div><!-- form-body -->
+</div><!-- form-wrap -->
+
+<script>
+function submitForm(){
+  const inputs = document.querySelectorAll('input, textarea, select');
+  let data = {};
+  inputs.forEach(el => {
+    if(el.type === 'checkbox' && el.checked){
+      const section = el.closest('.checkbox-group')?.previousElementSibling?.textContent || 'other';
+      if(!data[section]) data[section] = [];
+      data[section].push(el.parentElement.textContent.trim());
+    } else if(el.type === 'radio' && el.checked){
+      data[el.name] = el.value;
+    } else if((el.type === 'text' || el.type === 'email' || el.type === 'url' || el.type === 'tel' || el.tagName === 'TEXTAREA') && el.value){
+      const label = el.previousElementSibling?.textContent || 'field';
+      data[label] = el.value;
+    }
+  });
+  const mailto = 'mailto:jlasalle@dreamerai.io?subject=Project%20Discovery%20Form%20-%20Patrick%20Coyle&body=' + encodeURIComponent(JSON.stringify(data, null, 2));
+  window.location.href = mailto;
+  alert('Thank you Patrick! Your responses are being sent to Jason. If the email client didn\\'t open, please copy your responses and email them to jlasalle@dreamerai.io');
+}
+</script>
+
+</body>
+</html>
