@@ -228,9 +228,43 @@ function submitForm(){
       data[label] = el.value;
     }
   });
-  const mailto = 'mailto:jlasalle@dreamerai.io?subject=Project%20Discovery%20Form%20-%20Patrick%20Coyle&body=' + encodeURIComponent(JSON.stringify(data, null, 2));
-  window.location.href = mailto;
-  alert('Thank you Patrick! Your responses are being sent to Jason. If the email client didn\\'t open, please copy your responses and email them to jlasalle@dreamerai.io');
+  // Build readable text from collected data
+  let bodyText = '';
+  for(const [key, val] of Object.entries(data)){
+    if(Array.isArray(val)){
+      bodyText += key + ':\\n  ' + val.join('\\n  ') + '\\n\\n';
+    } else {
+      bodyText += key + ': ' + val + '\\n';
+    }
+  }
+
+  const btn = document.querySelector('.submit-btn');
+  btn.disabled = true;
+  btn.textContent = 'Submitting...';
+
+  const fd = new FormData();
+  fd.append('_subject', 'Project Discovery Form — NJ Pet Sitters (Patrick Coyle)');
+  fd.append('_template', 'box');
+  fd.append('_captcha', 'false');
+  fd.append('message', bodyText);
+
+  fetch('https://formsubmit.co/ajax/jlasalle@dreamerai.io', {
+    method: 'POST',
+    body: fd
+  })
+  .then(r => r.json())
+  .then(res => {
+    if(res.success){
+      btn.textContent = '✓ Submitted!';
+      btn.style.background = '#2ecc71';
+      document.querySelector('.form-body').innerHTML = '<div style="text-align:center;padding:60px 20px"><h2 style="color:#1A1A2E;font-family:Cormorant Garamond,Georgia,serif">Thank You, Patrick! 🎉</h2><p style="color:#555;margin-top:16px;font-size:1.1rem">Your responses have been sent to Jason at Dreamer AI Solutions.<br>We\\'ll review everything and follow up within 24 hours.</p></div>';
+    } else { throw new Error('fail'); }
+  })
+  .catch(err => {
+    btn.disabled = false;
+    btn.textContent = 'Submit Discovery Form →';
+    alert('Something went wrong. Please try again or email your responses to jlasalle@dreamerai.io');
+  });
 }
 </script>
 
