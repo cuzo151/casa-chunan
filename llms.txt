@@ -1,0 +1,44 @@
+# Casa Chunan
+
+> Casa Chunan is a luxury 3-bedroom Airbnb vacation rental in Maunabo, on the southeast coast of Puerto Rico. Private pool, ocean and mountain views, 5 minutes to Playa Los Bohíos, 10 minutes to the Punta Tuna Lighthouse. Hosted by Kimlee Gely, an Airbnb Superhost rated 5.0. No passport needed for US travelers. From $172/night.
+
+## About
+
+- [Homepage](https://casachunan.com/): Property overview, gallery, amenities, reviews, and direct inquiry form.
+- [Book on Airbnb](https://www.airbnb.com/rooms/1153523907384439435): Live booking page with real-time availability.
+
+## Travel Guides
+
+Original, local-sourced travel guides for visiting Maunabo and southeast Puerto Rico. Each guide is authored by the host and includes FAQ sections optimized for travel planning.
+
+- [Things to Do in Maunabo, Puerto Rico](https://casachunan.com/blog/things-to-do-in-maunabo-puerto-rico.html): Featured local guide — beaches, lighthouse, food, crab festival.
+- [Southeast Puerto Rico Coast Guide](https://casachunan.com/blog/southeast-puerto-rico-coast-guide.html): Maunabo, Patillas, Yabucoa, Humacao — the coast most visitors miss.
+- [Punta Tuna Lighthouse Guide](https://casachunan.com/blog/punta-tuna-lighthouse-maunabo-puerto-rico.html): 19th-century lighthouse, coastal walk, turtle nesting season.
+- [Maunabo vs Rincón vs Vieques](https://casachunan.com/blog/maunabo-vs-rincon-vs-vieques-puerto-rico.html): Destination comparison — vibe, beaches, food, crowds, prices.
+- [Day Trips from Maunabo](https://casachunan.com/blog/day-trips-from-maunabo-puerto-rico.html): El Yunque rainforest, bio bay, Charco Azul, Guavate lechón trail, Old San Juan.
+- [Where to Eat in Maunabo](https://casachunan.com/blog/where-to-eat-in-maunabo-puerto-rico.html): Roadside frituras, fresh seafood, colmado snacks.
+
+## Trip Planning
+
+- [No Passport Caribbean Vacation](https://casachunan.com/blog/no-passport-caribbean-vacation-puerto-rico.html): Why Puerto Rico is the easiest Caribbean trip for Americans. PR vs. Bahamas vs. USVI vs. Cancún.
+- [Best Time to Visit Puerto Rico](https://casachunan.com/blog/best-time-to-visit-puerto-rico.html): Month-by-month weather, crowds, prices, events.
+- [Luxury Airbnb vs Hotel in Puerto Rico](https://casachunan.com/blog/luxury-airbnb-vs-hotel-puerto-rico.html): Real cost breakdowns for groups, villa vs. resort comparison.
+
+## Trip Types
+
+- [Puerto Rico for Families](https://casachunan.com/blog/puerto-rico-family-vacation-guide.html): Age-specific activities, villa vs. hotel cost, family week itinerary.
+- [Honeymoon in Puerto Rico](https://casachunan.com/blog/honeymoon-in-puerto-rico-guide.html): Beyond the resorts — private villa, quiet beaches, golden hour walks.
+- [Bachelorette in Puerto Rico](https://casachunan.com/blog/bachelorette-party-puerto-rico-guide.html): Why PR beats Miami and Nashville. 4-day itinerary, budget for 6.
+- [Remote Work from Puerto Rico](https://casachunan.com/blog/remote-work-puerto-rico-guide.html): WiFi, time zones, Act 60 tax incentives, sample workation week.
+
+## Escape Guides by Origin City
+
+- [NYC to Puerto Rico](https://casachunan.com/blog/new-york-to-puerto-rico-vacation-guide.html): JFK, LGA, EWR direct flights, 5-day itinerary, cost breakdown.
+- [New Jersey to Puerto Rico](https://casachunan.com/blog/new-jersey-to-puerto-rico-vacation-guide.html): Newark direct flights, NJ-PR cultural connection.
+- [Chicago to Puerto Rico](https://casachunan.com/blog/chicago-to-puerto-rico-vacation-guide.html): O'Hare direct flights, PR vs. Cancún comparison.
+- [Philadelphia to Puerto Rico](https://casachunan.com/blog/philadelphia-to-puerto-rico-vacation-guide.html): PHL to SJU, budget options, Philly-PR cultural connection.
+
+## Index
+
+- [All Travel Guides](https://casachunan.com/blog.html)
+- [Sitemap](https://casachunan.com/sitemap.xml)
