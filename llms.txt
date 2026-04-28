@@ -42,6 +42,17 @@ Original, local-sourced travel guides for visiting Maunabo and southeast Puerto 
 - [Chicago to Puerto Rico](https://casachunan.com/blog/chicago-to-puerto-rico-vacation-guide.html): O'Hare direct flights, PR vs. Cancún comparison.
 - [Philadelphia to Puerto Rico](https://casachunan.com/blog/philadelphia-to-puerto-rico-vacation-guide.html): PHL to SJU, budget options, Philly-PR cultural connection.
 
+## Use-Case Landing Pages
+
+- [Corporate Retreats in Puerto Rico](https://casachunan.com/corporate-retreats-puerto-rico.html): Offsite venue, fast WiFi, group rates, sample 4-day retreat schedule.
+- [Family Reunion Villa](https://casachunan.com/family-reunion-villa-puerto-rico.html): 3 generations under one roof, partner villas for 8-14, 5-day reunion plan.
+
+## Spanish Content (es-PR)
+
+- [Qué Hacer en Maunabo](https://casachunan.com/es/que-hacer-en-maunabo-puerto-rico.html): Guía local — Faro de Punta Tuna, Playa Los Bohíos, Festival del Jueyes.
+- [Mejor Época para Visitar Puerto Rico](https://casachunan.com/es/mejor-epoca-visitar-puerto-rico.html): Clima, multitudes, precios mes a mes.
+- [Vacaciones Familiares en Puerto Rico](https://casachunan.com/es/casa-vacacional-familiar-puerto-rico.html): Actividades por edad, villa vs hotel, itinerario semanal.
+
 ## Index
 
 - [All Travel Guides](https://casachunan.com/blog.html)
