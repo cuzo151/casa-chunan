@@ -26,20 +26,41 @@
   <link rel="alternate" hreflang="es" href="https://casachunan.com/es/casa-vacacional-familiar-puerto-rico.html" />
   <link rel="alternate" hreflang="x-default" href="https://casachunan.com/blog/puerto-rico-family-vacation-guide.html" />
 
+  <!-- Tier 4: Article + Person schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "Puerto Rico for Families: Where to Stay and What to Do with Kids",
-    "author": { "@type": "Person", "name": "Kimlee Gely", "jobTitle": "Host", "worksFor": { "@type": "LodgingBusiness", "name": "Casa Chunan" } },
+    "image": "https://casachunan.com/images/blog/pr-families.jpg",
+    "datePublished": "2026-04-10",
+    "dateModified": "2026-05-28",
+    "description": "Plan a Puerto Rico family vacation: no passports needed, US services, kid-friendly activities, and where to stay with children. Age-by-age recommendations.",
+    "author": {
+      "@type": "Person",
+      "@id": "https://casachunan.com/#kimlee",
+      "name": "Kimlee Gely",
+      "url": "https://casachunan.com/about-the-host.html",
+      "jobTitle": "Airbnb Superhost & Host of Casa Chunan",
+      "knowsLanguage": [
+        "en-US",
+        "es-PR"
+      ]
+    },
     "publisher": {
       "@type": "Organization",
       "name": "Casa Chunan",
-      "logo": { "@type": "ImageObject", "url": "https://casachunan.com/CasaChunan_Painted-5.jpg" }
+      "url": "https://casachunan.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://casachunan.com/CasaChunan_Painted-5.jpg"
+      }
     },
-    "datePublished": "2026-04-10",
-    "description": "Plan a Puerto Rico family vacation: no passports needed, US services, kid-friendly activities, and where to stay with children. Age-by-age recommendations.",
-    "image": "https://casachunan.com/images/blog/pr-families.jpg"
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://casachunan.com/blog/puerto-rico-family-vacation-guide.html"
+    },
+    "inLanguage": "en-US"
   }
   </script>
   <script type="application/ld+json">
@@ -139,6 +160,18 @@
     .faq-item { margin-bottom: 1.5rem; }
     .faq-item strong { display: block; margin-bottom: 0.3rem; }
   </style>
+  <!-- Tier 4: BreadcrumbList for blog post -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Casa Chunan", "item": "https://casachunan.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Travel Guides", "item": "https://casachunan.com/blog.html" },
+      { "@type": "ListItem", "position": 3, "name": "Puerto Rico for Families: Where to Stay and What to Do with Kids", "item": "https://casachunan.com/blog/puerto-rico-family-vacation-guide.html" }
+    ]
+  }
+  </script>
 </head>
 <body>
   <div class="noise-overlay" aria-hidden="true"></div>
