@@ -226,6 +226,25 @@
     gtag('config', 'G-ZR9G24JF2Q');
   </script>
 
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      if (params.get('inquiry') === 'thanks') {
+        gtag('event', 'generate_lead', {
+          event_category: 'inquiry',
+          event_label: 'casachunan_homepage_form',
+          value: 1
+        });
+        if (window.history.replaceState) {
+          params.delete('inquiry');
+          var qs = params.toString();
+          var clean = window.location.pathname + (qs ? '?' + qs : '') + window.location.hash;
+          window.history.replaceState({}, '', clean);
+        }
+      }
+    })();
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
