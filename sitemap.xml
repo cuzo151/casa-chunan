@@ -228,4 +228,53 @@
     <changefreq>monthly</changefreq>
     <priority>0.82</priority>
   </url>
+
+  <url>
+    <loc>https://casachunan.com/blog/quiet-southeast-coast-puerto-rico-vacation.html</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://casachunan.com/geo/puerto-rico-private-pool-rental.html</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://casachunan.com/blog/sju-maunabo-road-trip-guide.html</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://casachunan.com/blog/el-yunque-day-trip-maunabo.html</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://casachunan.com/blog/fajardo-luquillo-east-coast-day-trip.html</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://casachunan.com/blog/guavate-pork-highway-day-trip-from-maunabo.html</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://casachunan.com/blog/puerto-rico-maunabo-hidden-gems-itinerary.html</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://casachunan.com/blog/puerto-rico-family-lodging-villas-vs-hotels.html</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
 </urlset>
